@@ -1,0 +1,4 @@
+	obj-m := hello.o
+	PWD=$(shell pwd)
+	KERNELDIR="/lib/modules/3.2.0-29-generic-pae/build"
+$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
